@@ -12,7 +12,7 @@ class MethodChannelNativeSharedPreferencesPlus
 
   @override
   Future<void> setIOSAppGroup(String? appGroup) async {
-    await methodChannel.invokeMethod<String>(
+    await methodChannel.invokeMethod<bool>(
       'setAppGroup',
       <String, dynamic>{"appGroup": appGroup},
     );
