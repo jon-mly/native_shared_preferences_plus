@@ -40,6 +40,10 @@ class NativeSharedPreferencesPlus {
     return _completer!.future;
   }
 
+  Future<void> setIOSAppGroup(String? appGroup) async {
+    await _store.setIOSAppGroup(appGroup);
+  }
+
   /// The cache that holds all preferences.
   ///
   /// It is instantiated to the current state of the SharedPreferences or
